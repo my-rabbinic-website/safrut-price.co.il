@@ -1,0 +1,224 @@
+<!DOCTYPE html>
+<html lang="he" dir="rtl">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+    <title>מחירון מהודר - ספרות תפארתך</title>
+    
+    <!-- Ultra-Fast Loading -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link href="https://fonts.googleapis.com/css2?family=Assistant:wght@300;400;700&family=Frank+Ruhl+Libre:wght@700;900&display=swap" rel="stylesheet">
+    
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    fontFamily: {
+                        sans: ['Assistant', 'sans-serif'],
+                        serif: ['Frank Ruhl Libre', 'serif'],
+                    },
+                    colors: {
+                        brandGold: '#D4AF37',
+                        brandGoldDark: '#996515',
+                        brandNavy: '#0c1425',
+                    }
+                }
+            }
+        }
+    </script>
+
+    <style>
+        /* Smooth Scroll and Performance */
+        html { scroll-behavior: smooth; }
+        body { 
+            background-color: #FDFBF7; 
+            -webkit-font-smoothing: antialiased;
+            touch-action: manipulation;
+        }
+
+        .gold-border {
+            border-image: linear-gradient(to right, #BF953F, #FCF6BA, #B38728) 1;
+        }
+
+        /* Prevent image/texture weight - use CSS pattern */
+        .paper-bg {
+            background-color: #fdfbf7;
+            background-image: radial-gradient(#d4af37 0.5px, transparent 0.5px);
+            background-size: 20px 20px;
+            background-attachment: fixed;
+            opacity: 0.05;
+            position: fixed;
+            inset: 0;
+            z-index: -1;
+        }
+
+        .hero-gradient {
+            background: linear-gradient(135deg, #0c1425 0%, #1a2a4a 100%);
+        }
+
+        /* Active states for mobile touch */
+        .touch-feedback:active {
+            transform: scale(0.96);
+            opacity: 0.9;
+        }
+
+        /* Clean animations without library overhead */
+        @keyframes fadeIn {
+            from { opacity: 0; transform: translateY(10px); }
+            to { opacity: 1; transform: translateY(0); }
+        }
+        .animate-fade { animation: fadeIn 0.6s ease-out forwards; }
+    </style>
+</head>
+<body class="font-sans text-gray-900 leading-tight">
+
+    <div class="paper-bg"></div>
+
+    <!-- Top Bar -->
+    <div class="w-full bg-brandNavy text-brandGold py-2 text-center text-[10px] tracking-widest font-bold uppercase border-b border-brandGold/30">
+        בסייעתא דשמיא | עיה"ק נתיבות, ת"ו
+    </div>
+
+    <!-- Header -->
+    <header class="hero-gradient text-white pt-12 pb-16 px-6 text-center border-b-4 border-brandGold">
+        <div class="animate-fade">
+            <span class="text-brandGold text-[10px] tracking-[0.4em] font-bold">STAM ARTISTRY</span>
+            <h1 class="font-serif text-5xl sm:text-7xl mt-2 mb-4">ספרות תפארתך</h1>
+            <div class="w-16 h-1 bg-brandGold mx-auto rounded-full"></div>
+            <p class="mt-4 text-lg font-light opacity-80">אומנות כתבי הקודש בהידור רב</p>
+        </div>
+    </header>
+
+    <main class="max-w-4xl mx-auto px-4 py-10 space-y-12">
+
+        <!-- Main Title -->
+        <div class="text-center space-y-2 mb-8 animate-fade" style="animation-delay: 0.1s;">
+            <h2 class="font-serif text-3xl sm:text-4xl text-brandNavy">מחירון לשנת תשפ"ה</h2>
+            <p class="text-brandGoldDark text-sm font-bold italic tracking-wide">עיה"ק נתיבות</p>
+        </div>
+
+        <!-- ספרי תורה -->
+        <section class="animate-fade" style="animation-delay: 0.2s;">
+            <div class="flex items-center gap-4 mb-6">
+                <div class="h-px bg-brandGold/40 flex-1"></div>
+                <h3 class="font-serif text-2xl font-bold text-brandNavy">ספרי תורה</h3>
+                <div class="h-px bg-brandGold/40 flex-1"></div>
+            </div>
+
+            <div class="grid grid-cols-1 gap-4">
+                <div class="bg-white p-5 rounded-xl shadow-sm border border-gray-100 flex justify-between items-center">
+                    <div>
+                        <h4 class="font-bold text-brandNavy">כתיבה סטנדרטית</h4>
+                        <p class="text-[10px] text-gray-500 uppercase tracking-wider">הידור כשר לכתחילה</p>
+                    </div>
+                    <div class="text-xl font-black text-brandNavy">₪140,000</div>
+                </div>
+                
+                <div class="bg-white p-6 rounded-xl shadow-md border-2 border-brandGold flex justify-between items-center relative overflow-hidden">
+                    <div class="absolute top-0 right-0 bg-brandGold text-white text-[9px] px-2 py-0.5 font-bold rounded-bl-lg uppercase">מומלץ</div>
+                    <div>
+                        <h4 class="font-bold text-brandNavy text-lg">יריעות עבודת יד</h4>
+                        <p class="text-[10px] text-brandGoldDark font-bold uppercase tracking-wider">עיבוד ידני משובח</p>
+                    </div>
+                    <div class="text-2xl font-black text-brandNavy">₪160,000</div>
+                </div>
+
+                <div class="bg-white p-5 rounded-xl shadow-sm border border-gray-100 flex justify-between items-center">
+                    <div>
+                        <h4 class="font-bold text-brandNavy">מהדורת "שלי"</h4>
+                        <p class="text-[10px] text-gray-500 uppercase tracking-wider">48 ס"מ - דיוק נדיר</p>
+                    </div>
+                    <div class="text-xl font-black text-brandNavy">₪185,000</div>
+                </div>
+            </div>
+        </section>
+
+        <!-- תפילין -->
+        <section class="animate-fade" style="animation-delay: 0.3s;">
+            <div class="flex items-center gap-4 mb-6">
+                <div class="h-px bg-brandGold/40 flex-1"></div>
+                <h3 class="font-serif text-2xl font-bold text-brandNavy">תפילין</h3>
+                <div class="h-px bg-brandGold/40 flex-1"></div>
+            </div>
+
+            <div class="grid grid-cols-1 sm:grid-cols-2 gap-3">
+                <div class="bg-white p-4 rounded-lg border-r-4 border-brandGold flex justify-between items-center shadow-sm">
+                    <span class="font-bold text-gray-700">בתים מכונה</span>
+                    <span class="font-serif font-black text-brandNavy">₪3,500</span>
+                </div>
+                <div class="bg-white p-4 rounded-lg border-r-4 border-brandGold flex justify-between items-center shadow-sm">
+                    <span class="font-bold text-gray-700">בתים ר"ר מכוון</span>
+                    <span class="font-serif font-black text-brandNavy">₪3,800</span>
+                </div>
+                <div class="bg-brandNavy p-4 rounded-lg flex justify-between items-center shadow-md sm:col-span-2">
+                    <span class="font-bold text-brandGold">גודל "פיצפוני"</span>
+                    <span class="font-serif font-black text-white">₪6,000</span>
+                </div>
+                <div class="bg-white p-4 rounded-lg border-r-4 border-gray-200 flex justify-between items-center shadow-sm sm:col-span-2">
+                    <span class="font-bold text-gray-700">טלית וריקמה</span>
+                    <span class="font-serif font-black text-gray-400">₪580</span>
+                </div>
+            </div>
+        </section>
+
+        <!-- מזוזות -->
+        <section class="animate-fade" style="animation-delay: 0.4s;">
+            <div class="bg-brandNavy rounded-2xl p-8 text-white shadow-xl relative overflow-hidden">
+                <h3 class="font-serif text-3xl mb-6 text-brandGold">מזוזות מהודרות</h3>
+                <div class="space-y-4">
+                    <div class="flex justify-between border-b border-white/10 pb-3">
+                        <span class="opacity-80">גודל 15 ס"מ</span>
+                        <span class="font-serif text-xl font-bold">₪350</span>
+                    </div>
+                    <div class="flex justify-between border-b border-white/10 pb-3">
+                        <span class="opacity-80">גודל 20 ס"מ</span>
+                        <span class="font-serif text-xl font-bold">₪470</span>
+                    </div>
+                    <div class="flex justify-between border-b border-white/10 pb-3">
+                        <span class="opacity-80">גודל 25 ס"מ</span>
+                        <span class="font-serif text-xl font-bold">₪570</span>
+                    </div>
+                </div>
+                <!-- Mini icon for style -->
+                <div class="absolute -bottom-4 -left-4 opacity-5 rotate-12">
+                    <svg width="120" height="120" fill="white" viewBox="0 0 24 24"><path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z"/></svg>
+                </div>
+            </div>
+        </section>
+
+    </main>
+
+    <!-- Footer / Contact -->
+    <footer class="bg-brandNavy text-white py-16 px-6 text-center border-t-4 border-brandGold">
+        <h2 class="font-serif text-3xl mb-1">ספרות תפארתך</h2>
+        <p class="text-brandGold text-[10px] tracking-[0.5em] mb-10">נתיבות • ירושלים • בני ברק</p>
+        
+        <div class="grid grid-cols-1 gap-4 max-w-xs mx-auto mb-12">
+            <a href="tel:0528219928" class="touch-feedback flex items-center justify-center gap-3 py-4 bg-white/5 border border-white/10 rounded-xl font-bold text-xl tracking-tighter">
+                <svg class="w-5 h-5 text-brandGold" fill="currentColor" viewBox="0 0 20 20"><path d="M2 3a1 1 0 011-1h2.153a1 1 0 01.986.836l.74 4.435a1 1 0 01-.54 1.06l-1.548.773a11.037 11.037 0 006.105 6.105l.774-1.548a1 1 0 011.059-.54l4.435.74a1 1 0 01.836.986V17a1 1 0 01-1 1h-2C7.82 18 2 12.18 2 5V3z"></path></svg>
+                052-821-9928
+            </a>
+            <a href="tel:0534192798" class="touch-feedback flex items-center justify-center gap-3 py-4 bg-white/5 border border-white/10 rounded-xl font-bold text-xl tracking-tighter">
+                <svg class="w-5 h-5 text-brandGold" fill="currentColor" viewBox="0 0 20 20"><path d="M2 3a1 1 0 011-1h2.153a1 1 0 01.986.836l.74 4.435a1 1 0 01-.54 1.06l-1.548.773a11.037 11.037 0 006.105 6.105l.774-1.548a1 1 0 011.059-.54l4.435.74a1 1 0 01.836.986V17a1 1 0 01-1 1h-2C7.82 18 2 12.18 2 5V3z"></path></svg>
+                053-419-2798
+            </a>
+            <a href="mailto:Tifarteha@gmail.com" class="touch-feedback py-4 bg-brandGold text-brandNavy rounded-xl font-bold text-sm">
+                Tifarteha@gmail.com
+            </a>
+        </div>
+        
+        <p class="text-[9px] opacity-40 tracking-widest uppercase">Certified Sofer STaM • Excellence Since 2010</p>
+    </footer>
+
+    <!-- Fixed Floating Contact (Mobile Only) -->
+    <div class="fixed bottom-6 left-6 flex flex-col gap-3 z-50 sm:hidden">
+        <a href="mailto:Tifarteha@gmail.com" class="w-14 h-14 bg-white text-brandNavy rounded-full shadow-2xl flex items-center justify-center border border-brandGold active:scale-90 transition-transform">
+            <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M3 8l7.89 5.26a2 2 0 002.22 0L21 8M5 19h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v10a2 2 0 002 2z"></path></svg>
+        </a>
+        <a href="tel:0528219928" class="w-14 h-14 bg-brandGold text-brandNavy rounded-full shadow-2xl flex items-center justify-center active:scale-90 transition-transform">
+            <svg class="w-6 h-6" fill="currentColor" viewBox="0 0 20 20"><path d="M2 3a1 1 0 011-1h2.153a1 1 0 01.986.836l.74 4.435a1 1 0 01-.54 1.06l-1.548.773a11.037 11.037 0 006.105 6.105l.774-1.548a1 1 0 011.059-.54l4.435.74a1 1 0 01.836.986V17a1 1 0 01-1 1h-2C7.82 18 2 12.18 2 5V3z"></path></svg>
+        </a>
+    </div>
+
+</body>
+</html>
